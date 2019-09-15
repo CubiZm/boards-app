@@ -25,9 +25,9 @@
       position: absolute;
       top: 0;
       left: 4rem;
-      width: calc(100%  - 4rem);
+      width: calc(100% - 4rem);
       height: 1px;
-      background-color: rgba(255,255,255,0.12);
+      background-color: rgba(255, 255, 255, 0.12);
     }
   }
 }
@@ -40,7 +40,7 @@
 
   &:hover,
   &:focus {
-    background-color: #4488FF;
+    background-color: $blue;
   }
 }
 

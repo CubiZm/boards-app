@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 
-import arrow from "./static/img/arrow.svg"
+import arrow from "./static/img/arrow.svg";
 
 import "./Select.scss";
 
@@ -11,37 +11,32 @@ interface selectProps {
 }
 
 const Select = (props: selectProps) => {
-
-  const renderSelectValue = (data: any) => {
+  const renderSelectValue = (data: any, i: number) => {
     return (
-      <div key={data.id} className="select-box__value">
+      <div key={i + 50} className="select-box__value">
         <input
+          key={i + 100}
           className="select-box__input"
           type="radio"
           id={data.id}
           value={data.id}
           name={data.name}
           checked={true}
-          onChange={() => console.log('hello')}
+          onChange={() => console.log("hello")}
         />
-        <p className="select-box__input-text">
+        <p key={i + 200} className="select-box__input-text">
           {data.selectValue ? data.selectValue : "Empty text"}
         </p>
       </div>
     );
   };
 
-  const renderSelectList = (data: any) => {
+  const renderSelectList = (data: any, y: number) => {
     return (
       <>
         {data.selectValue && (
-          <li key={data.id} className={cn("select-box__item", {
-          })}>
-            <label
-              className="select-box__option"
-              htmlFor={data.id}
-              aria-hidden={true}
-            >
+          <li key={y + 1000} className={cn("select-box__item", {})}>
+            <label key={y + 1000} className="select-box__option" htmlFor={data.id}>
               {data.selectValue}
             </label>
           </li>

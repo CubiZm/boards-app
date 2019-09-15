@@ -11,7 +11,7 @@
 .input-box__input {
   @include text-style($font-main-text);
   padding: 0.5rem 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.32);
+  border: 1px solid $medium-dark-grey;
   border-radius: 2px;
   min-width: 30rem;
   height: 3.4rem;
@@ -20,28 +20,28 @@
 
   &:hover,
   &:focus {
-    border-color: #4488ff;
+    border-color: $blue;
   }
 
   &::placeholder {
     @include text-style($font-main-text);
-    color: rgba(0, 0, 0, 0.32);
+    color: $medium-dark-grey;
   }
 
   &:disabled {
-    border-color: rgba(0, 0, 0, 0.16);
-    color: rgba(0, 0, 0, 0.32);
+    border-color: $medium-light-grey;
+    color: $medium-dark-grey;
 
     & + .input-box__label {
-      color: rgba(0, 0, 0, 0.32);
+      color: $medium-dark-grey;
     }
   }
 
   &_error {
-    border-color: #f15866;
+    border-color: $error-color;
 
     & + .input-box__label {
-      color: #f15866;
+      color: $error-color;
     }
   }
 }

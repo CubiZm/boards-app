@@ -4,19 +4,19 @@ import { data } from "./data";
 import "./SideMenu.scss";
 
 const SideMenu = () => {
-  const renderMenuItem = (data: any) => {
+  const renderMenuItem = (data: any , i: number) => {
     return (
-      <ul key={data.id} className="side-menu__list">
+      <ul key={i} className="side-menu__list">
         {data.title && (
-          <li className="side-menu__title">
-            <img className="side-menu__icon" src={data.img} alt="icon" />
+          <li key={i} className="side-menu__title">
+            <img key={i} className="side-menu__icon" src={data.img} alt="icon" />
             {data.title}
           </li>
         )}
-        {data.text.map((data: string) => (
-          <li className="side-menu__item" tabIndex={1}>
+        {data.text.map((data: string, y: number) => (
+          <li key={y} className="side-menu__item" tabIndex={1}>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a href="#" className="side-menu__link">
+            <a key={y} href="#" className="side-menu__link">
               {data}
             </a>
           </li>

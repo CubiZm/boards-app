@@ -8,7 +8,7 @@ $sp_form_image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
 
   &:disabled {
     & + .input-toggle__label {
-      color: rgba(0, 0, 0, 0.32);
+      color: $medium-dark-grey;
       cursor: default;
     }
   }
@@ -16,13 +16,13 @@ $sp_form_image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
   &_error {
     & + .input-toggle__label_checkbox {
 
-      color: #F15866;
+      color: $error-color;
 
       &::before {
         top: 0.5rem;
         width: 1.4rem;
         height: 1.4rem;
-        border: 1px solid #F15866;
+        border: 1px solid $error-color;
         border-radius: 2px;
       }
     }
@@ -57,18 +57,18 @@ $sp_form_image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
   top: 0.5rem;
   width: 1.4rem;
   height: 1.4rem;
-  border: 1px solid rgba(0, 0, 0, 0.32);
+  border: 1px solid $medium-dark-grey;
   border-radius: 2px;
 }
 
 .input-toggle__label_checkbox:hover::before,
 .input-toggle__label_checkbox:focus::before {
-  border: 1px solid #4488ff;
+  border: 1px solid $blue;
 }
 
 .input-toggle__input:disabled + .input-toggle__label_checkbox::before {
-  border: 1px solid rgba(0, 0, 0, 0.32);
-  color: rgba(0, 0, 0, 0.32);
+  border: 1px solid $medium-dark-grey;
+  color:$medium-dark-grey;
 }
 
 .input-toggle__input:checked:disabled + .input-toggle__label_checkbox::after {

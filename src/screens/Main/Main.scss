@@ -1,7 +1,6 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 
-
 .profile__title {
   @include text-style($font-title-h1, $font-lh-h1, $font-bold);
   margin: 0;
@@ -42,7 +41,6 @@
 }
 
 .profile__form-workplace {
-
   .select-box {
     &:nth-child(2n) {
       margin-left: 3.2rem;
@@ -54,16 +52,16 @@
   @include text-style();
   margin-left: 2.6rem;
   text-decoration: none;
-  color: #4488ff;
+  color: $blue;
   outline: none;
 
   &:hover,
   &:focus {
-    color: #69a0f6;
+    color: $light-blue;
   }
 
   &:active {
-    color: #3d7ae6;
+    color: $dark-blue;
   }
 }
 

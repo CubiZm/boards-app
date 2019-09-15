@@ -18,17 +18,19 @@ const Avatar = (props: Props) => {
   return (
     <div className={cn("avatar-box", props.classnameAvatar)}>
       {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-      <a className="avatar-box__loader" href="#">
-        <img className={cn("avatar-box__picture", props.classnameAvatarImg)} src={props.userAvatarImg || noPicture} alt="your avatar" />
+      <a className="avatar-box__loader" href="#" tabIndex={1}>
+        <img
+          className={cn("avatar-box__picture", props.classnameAvatarImg)}
+          src={props.userAvatarImg || noPicture}
+          alt="your avatar"
+        />
         <span>upload</span>
       </a>
 
       <div className="avatar-box__info">
-        <p className="avatar-box__user-name">
-          {props.userName}
-        </p>
+        <p className="avatar-box__user-name">{props.userName}</p>
         <p className="avatar-box__staff">
-          {props.userStuff} {" "} {props.userTeam}
+          {props.userStuff} {props.userTeam}
         </p>
       </div>
     </div>

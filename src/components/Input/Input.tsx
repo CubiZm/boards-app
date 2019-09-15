@@ -5,7 +5,7 @@ import "./Input.scss";
 interface Props {
   type?: string;
   defaultValue?: string;
-  labelValue?: string
+  labelValue?: string;
   id: string;
   placeholder?: string;
   disabled?: boolean;
@@ -35,6 +35,7 @@ export const Input = (props: Props) => {
         defaultValue={props.defaultValue}
         onChange={handlerChanges}
         disabled={props.disabled}
+        tabIndex={1}
       />
       <label htmlFor={props.id} className="input-box__label">
         {props.labelValue}

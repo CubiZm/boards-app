@@ -72,7 +72,9 @@ const Main = () => {
             <Button isTextBtn={true} textBtn="Cancel" />
           </form>
 
-          <h2 className="profile__title profile__title_primary">Workspace settings</h2>
+          <h2 className="profile__title profile__title_primary">
+            Workspace settings
+          </h2>
 
           <form action="" className="profile__form-workplace">
             <fieldset className="profile__fiedset">
@@ -95,10 +97,16 @@ const Main = () => {
                 text="Show pop-up with suggestion to align the dates of tasks and subtasks."
               />
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a href="#" className="profile__link" tabIndex={1}>How does subtask alignment work?</a>
+              <a href="#" className="profile__link" tabIndex={1}>
+                How does subtask alignment work?
+              </a>
             </fieldset>
 
-            <Button classname="profile__btn" textBtn="Save settings" disabled={true} />
+            <Button
+              classname="profile__btn"
+              textBtn="Save settings"
+              disabled={true}
+            />
           </form>
         </div>
       </Content>

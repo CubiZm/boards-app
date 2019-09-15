@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Main from "../Main/Main";
 
 import "./App.scss";
@@ -6,7 +6,7 @@ import "./App.scss";
 const App = () => {
   return (
     <div className="App">
-        <Main/>
+      <Main />
     </div>
   );
 };
