@@ -2,6 +2,7 @@
   "name": "boards-app",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://cubizm.github.io/boards-app",
   "dependencies": {
     "@types/classnames": "^2.2.9",
     "@types/jest": "24.0.18",
