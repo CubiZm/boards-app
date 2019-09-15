@@ -2,7 +2,6 @@
   "name": "boards-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://cubizm.github.io/boards-app",
   "dependencies": {
     "@types/classnames": "^2.2.9",
     "@types/jest": "24.0.18",
@@ -10,6 +9,7 @@
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
     "classnames": "^2.2.6",
+    "focus-within-polyfill": "^5.0.4",
     "node-sass": "^4.12.0",
     "normalize.css": "^8.0.1",
     "react": "^16.9.0",
@@ -43,6 +43,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.1.1"
+    "gh-pages": "^2.1.1",
+    "react-app-rewire-postcss": "^3.0.2",
+    "react-app-rewired": "^2.1.3"
   }
 }
