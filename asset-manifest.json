@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/boards-app/static/css/main.1086f6b8.chunk.css",
+    "main.js": "/boards-app/static/js/main.8eaea142.chunk.js",
+    "main.js.map": "/boards-app/static/js/main.8eaea142.chunk.js.map",
+    "runtime~main.js": "/boards-app/static/js/runtime~main.4b258751.js",
+    "runtime~main.js.map": "/boards-app/static/js/runtime~main.4b258751.js.map",
+    "static/js/2.1ac8bf2e.chunk.js": "/boards-app/static/js/2.1ac8bf2e.chunk.js",
+    "static/js/2.1ac8bf2e.chunk.js.map": "/boards-app/static/js/2.1ac8bf2e.chunk.js.map",
+    "index.html": "/boards-app/index.html",
+    "precache-manifest.b97b044c9b50b50252b71fe7d63ba81e.js": "/boards-app/precache-manifest.b97b044c9b50b50252b71fe7d63ba81e.js",
+    "service-worker.js": "/boards-app/service-worker.js",
+    "static/css/main.1086f6b8.chunk.css.map": "/boards-app/static/css/main.1086f6b8.chunk.css.map",
+    "static/media/arrow.svg": "/boards-app/static/media/arrow.b6065243.svg",
+    "static/media/logo.svg": "/boards-app/static/media/logo.f6f012d7.svg",
+    "static/media/index.scss": "/boards-app/static/media/opensanssemibold.86dd4197.woff2",
+    "static/media/settigns-icon.svg": "/boards-app/static/media/settigns-icon.50fd70b9.svg",
+    "static/media/user-avatar.svg": "/boards-app/static/media/user-avatar.42a40d48.svg",
+    "static/media/user-icon.svg": "/boards-app/static/media/user-icon.0fe516fe.svg"
+  }
+}
