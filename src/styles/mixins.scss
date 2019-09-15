@@ -1,0 +1,8 @@
+@import "./variables";
+
+@mixin text-style($size: $font-main-text, $line-height: $font-lh-main, $font-weight: $font-regular, $color: $font-color) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $color;
+}

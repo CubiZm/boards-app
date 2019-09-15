@@ -1,0 +1,24 @@
+@import "~normalize.css";
+@import "variables";
+@import "mixins";
+@import "fonts";
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  font-family: $font-base;
+  font-weight: $font-regular;
+  font-feature-settings: "tnum";
+  background-color: $panel-color;
+}

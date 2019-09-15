@@ -1,0 +1,67 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.button {
+  @include text-style(
+    $font-main-text,
+    $font-lh-main,
+    $font-regular,
+    $font-color-inverted
+  );
+  padding: 0.4rem 1.6rem;
+  background-color: #4488ff;
+  border: 1px solid #4488ff;
+  border-radius: 2px;
+  outline: none;
+  -webkit-appearance: none;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #69a0f6;
+    background-color: #69a0f6;
+  }
+
+  &:active {
+    border: 1px solid #3d7ae6;
+    background-color: #3d7ae6;
+  }
+
+  &:disabled {
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    color: rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+      border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.button_outline {
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  color: $font-color;
+  background-color: #fff;
+
+  &:hover,
+  &:focus {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+  }
+}
+
+.button_text {
+  padding-left: 0;
+  padding-right: 0;
+  background-color: transparent;
+  border: 0;
+  color: $font-color;
+  text-align: left;
+
+  &:hover,
+  &:focus {
+    border: 0;
+    background-color: transparent;
+    color: #4488ff;
+  }
+}

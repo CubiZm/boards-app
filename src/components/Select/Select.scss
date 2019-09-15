@@ -1,0 +1,130 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.select-box {
+  @include text-style();
+  position: relative;
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.select-box__current {
+  position: relative;
+  width: 30rem;
+  cursor: pointer;
+  outline: none;
+
+  &:focus {
+    & + .select-box__list {
+      opacity: 1;
+      animation-name: none;
+
+      .select-box__option {
+        cursor: pointer;
+      }
+    }
+
+    .select-box__icon {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}
+
+.select-box__label {
+  @include text-style($font-secondary-text);
+  display: block;
+  margin-bottom: 0.5rem;
+  height: 2.2rem;
+}
+
+.select-box__icon {
+  position: absolute;
+  top: 4.5rem;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 1.4em;
+  transition: 0.2s ease;
+}
+
+.select-box__value {
+  display: flex;
+  position: relative;
+}
+
+.select-box__input {
+  display: none;
+
+  &:checked + .select-box__input-text {
+    display: block;
+  }
+
+  &:checked ~ .select-box__option {
+    background-color: #4488ff;
+  }
+
+  &:disabled + .select-box__input-text {
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    color: rgba(0, 0, 0, 0.32);
+  }
+}
+
+.select-box__input-text {
+  display: none;
+  width: 30rem;
+  margin: 0;
+  padding: 0.5rem 3.2rem 0.5rem 1rem;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  border-radius: 2px;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.32);
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid #4488ff;
+  }
+}
+
+.select-box__list {
+  position: absolute;
+  width: 25.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  z-index: 1;
+  background-color: #fff;
+
+  animation-name: HideList;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: step-start;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: -1px 8px 30px 3px rgba(0, 0, 0, 0.2);
+}
+
+.select-box__option {
+  display: block;
+  padding: 0.5rem 3.2rem 0.5rem;
+  background-color: #fff;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+}
+
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}

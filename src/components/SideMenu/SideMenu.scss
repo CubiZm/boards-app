@@ -1,0 +1,65 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.side-menu {
+  position: fixed;
+  padding-right: 3.2rem;
+  width: 24.6rem;
+  height: 100%;
+  background-color: $panel-color;
+  overflow-y: hidden;
+}
+
+.side-menu__list {
+  position: relative;
+  margin: 0;
+  margin-bottom: 1.6rem;
+  padding: 0;
+  list-style: none;
+
+  &:not(:first-child) {
+    padding-top: 1.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 4rem;
+      width: calc(100%  - 4rem);
+      height: 1px;
+      background-color: rgba(255,255,255,0.12);
+    }
+  }
+}
+
+.side-menu__item {
+  @include text-style($font-secondary-text, $color: $font-color-inverted);
+  padding: 0.5rem 0 0.5rem 4rem;
+  border-radius: 2px;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: #4488FF;
+  }
+}
+
+.side-menu__title {
+  @include text-style($font-secondary-text, $color: $font-color-inverted);
+  position: relative;
+  padding: 0.5rem 0 0.5rem 4rem;
+  text-transform: uppercase;
+}
+
+.side-menu__icon {
+  position: absolute;
+  top: 0.7rem;
+  left: 1.6rem;
+}
+
+.side-menu__link {
+  padding: 8px 0;
+  text-decoration: none;
+  color: $font-color-inverted;
+  outline: none;
+}

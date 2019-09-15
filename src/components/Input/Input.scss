@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  margin-bottom: 2.4rem;
+}
+
+.input-box__input {
+  @include text-style($font-main-text);
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  border-radius: 2px;
+  min-width: 30rem;
+  height: 3.4rem;
+  outline: none;
+  order: 2;
+
+  &:hover,
+  &:focus {
+    border-color: #4488ff;
+  }
+
+  &::placeholder {
+    @include text-style($font-main-text);
+    color: rgba(0, 0, 0, 0.32);
+  }
+
+  &:disabled {
+    border-color: rgba(0, 0, 0, 0.16);
+    color: rgba(0, 0, 0, 0.32);
+
+    & + .input-box__label {
+      color: rgba(0, 0, 0, 0.32);
+    }
+  }
+
+  &_error {
+    border-color: #f15866;
+
+    & + .input-box__label {
+      color: #f15866;
+    }
+  }
+}
+
+.input-box__label {
+  @include text-style($font-secondary-text);
+  display: block;
+  margin-bottom: 0.5rem;
+  order: 1;
+}

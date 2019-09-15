@@ -1,0 +1,68 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+
+.profile__title {
+  @include text-style($font-title-h1, $font-lh-h1, $font-bold);
+  margin: 0;
+  margin-bottom: 3.2rem;
+  letter-spacing: 0;
+}
+
+.profile__form-info {
+  margin-bottom: 6.4rem;
+
+  button:first-of-type {
+    margin-right: 2rem;
+  }
+}
+
+.profile__fiedset {
+  margin: 0;
+  margin-bottom: 3.2rem;
+  padding: 0;
+  border: 0;
+
+  &_big-margin {
+    margin-bottom: 3.7rem;
+  }
+}
+
+.profile__fiedset-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  .input-box {
+    &:nth-child(2n) {
+      margin-left: 3.2rem;
+    }
+  }
+}
+
+.profile__form-workplace {
+  margin-bottom: 6.4rem;
+
+  .select-box {
+    &:nth-child(2n) {
+      margin-left: 3.2rem;
+    }
+  }
+}
+
+.profile__link {
+  @include text-style();
+  margin-left: 2.6rem;
+  text-decoration: none;
+  color: #4488ff;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: #69a0f6;
+  }
+
+  &:active {
+    color: #3d7ae6;
+  }
+}
