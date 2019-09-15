@@ -3,10 +3,6 @@
 
 $sp_form_image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436L24 5.782z' fill='%2348F'/%3E%3C/svg%3E%0A";
 
-.input-toggle {
-  margin-bottom: 0.8rem;
-}
-
 .input-toggle__input {
   display: none;
 
@@ -16,6 +12,25 @@ $sp_form_image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
       cursor: default;
     }
   }
+
+  &_error {
+    & + .input-toggle__label_checkbox {
+
+      color: #F15866;
+
+      &::before {
+        top: 0.5rem;
+        width: 1.4rem;
+        height: 1.4rem;
+        border: 1px solid #F15866;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+.input-toggle__input_error:checked + .input-toggle__label_checkbox::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436L24 5.782z' fill='%23F15866'/%3E%3C/svg%3E%0A");
 }
 
 .input-toggle__label {
@@ -27,21 +42,21 @@ $sp_form_image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
   outline: none;
 }
 
-.input-toggle__label_checkbox {
-  padding-left: 2.6rem;
-}
-
 .input-toggle__label::before,
 .input-toggle__label::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 0.3rem;
+}
+
+.input-toggle__label_checkbox {
+  padding-left: 2.6rem;
 }
 
 .input-toggle__label_checkbox::before {
   top: 0.5rem;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.4rem;
+  height: 1.4rem;
   border: 1px solid rgba(0, 0, 0, 0.32);
   border-radius: 2px;
 }
@@ -56,11 +71,19 @@ $sp_form_image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
   color: rgba(0, 0, 0, 0.32);
 }
 
+.input-toggle__input:checked:disabled + .input-toggle__label_checkbox::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436L24 5.782z' fill='%23bbb'/%3E%3C/svg%3E%0A");
+}
+
 .input-toggle__input:checked + .input-toggle__label_checkbox::after {
   top: 0.3rem;
-  left: 0.3rem;
-  width: 1.8rem;
-  height: 1.8rem;
+  left: 0.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
   background: url($sp_form_image) no-repeat;
-  background-size: cover;
+  background-size: contain;
+}
+
+.input-toggle__input_error:checked + .input-toggle__label_checkbox::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436L24 5.782z' fill='%23F15866'/%3E%3C/svg%3E%0A");
 }

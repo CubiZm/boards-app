@@ -14,7 +14,8 @@
   cursor: pointer;
   outline: none;
 
-  &:focus {
+  &:focus,
+  &:focus-within {
     & + .select-box__list {
       opacity: 1;
       animation-name: none;
@@ -33,17 +34,16 @@
 .select-box__label {
   @include text-style($font-secondary-text);
   display: block;
-  margin-bottom: 0.5rem;
   height: 2.2rem;
 }
 
 .select-box__icon {
   position: absolute;
-  top: 4.5rem;
-  right: 1rem;
+  top: 4rem;
+  right: 0.7rem;
   transform: translateY(-50%);
-  width: 2rem;
-  height: 1.4em;
+  width: 1.8rem;
+  height: 1.3em;
   transition: 0.2s ease;
 }
 

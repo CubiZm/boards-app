@@ -7,10 +7,15 @@
   margin: 0;
   margin-bottom: 3.2rem;
   letter-spacing: 0;
+
+  &_primary {
+    font-size: $font-title-h2;
+    margin-bottom: 1.1rem;
+  }
 }
 
 .profile__form-info {
-  margin-bottom: 6.4rem;
+  margin-bottom: 6rem;
 
   button:first-of-type {
     margin-right: 2rem;
@@ -19,13 +24,9 @@
 
 .profile__fiedset {
   margin: 0;
-  margin-bottom: 3.2rem;
+  margin-bottom: 0.8rem;
   padding: 0;
   border: 0;
-
-  &_big-margin {
-    margin-bottom: 3.7rem;
-  }
 }
 
 .profile__fiedset-wrap {
@@ -41,7 +42,6 @@
 }
 
 .profile__form-workplace {
-  margin-bottom: 6.4rem;
 
   .select-box {
     &:nth-child(2n) {
@@ -65,4 +65,8 @@
   &:active {
     color: #3d7ae6;
   }
+}
+
+.profile__btn {
+  margin-top: 1.8rem;
 }

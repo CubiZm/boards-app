@@ -2,9 +2,10 @@
 
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: $panel-color;
-  padding: 1.2rem 3.2rem;
+  padding: 0 3.2rem;
   color: $font-color-inverted;
   min-height: 5.6rem;
 }

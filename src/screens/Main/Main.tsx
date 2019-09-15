@@ -24,7 +24,7 @@ const Main = () => {
             userAvatarImg="http://heyanton.com/_images/userpics/all/49.jpg"
             userName="Jhon Smith"
             userStuff="UI developer"
-            userTeam="crafting"
+            userTeam="crafting Team"
           />
 
           <form action="" className="profile__form-info">
@@ -72,10 +72,10 @@ const Main = () => {
             <Button isTextBtn={true} textBtn="Cancel" />
           </form>
 
-          <h2 className="profile__title">Workspace settings</h2>
+          <h2 className="profile__title profile__title_primary">Workspace settings</h2>
 
           <form action="" className="profile__form-workplace">
-            <fieldset className="profile__fiedset  profile__fiedset_big-margin">
+            <fieldset className="profile__fiedset">
               <div className="profile__fiedset-wrap">
                 <Select selectedTitle="Time Zone" data={dataTimeZone} />
 
@@ -94,24 +94,12 @@ const Main = () => {
                 name="suggest"
                 text="Show pop-up with suggestion to align the dates of tasks and subtasks."
               />
-
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a href="#" className="profile__link" tabIndex={1}>How does subtask alignment work?</a>
             </fieldset>
 
-            <Button textBtn="Save settings" disabled={true} />
+            <Button classname="profile__btn" textBtn="Save settings" disabled={true} />
           </form>
-
-          {/*<div className="test">*/}
-          {/*  <Select selectedTitle="smb" data={dataLanguage} />*/}
-          {/*</div>*/}
-
-          {/*<div style={{ marginTop: "20px" }}>*/}
-          {/*  <Input id={"name"} defaultValue={"Hello"} placeholder={"hello"} />*/}
-          {/*</div>*/}
-
-          {/*<div style={{ marginTop: "20px" }}>*/}
-
-          {/*</div>*/}
         </div>
       </Content>
     </>

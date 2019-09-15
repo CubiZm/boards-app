@@ -7,7 +7,8 @@ interface ButtonProps {
   isTextBtn?: boolean;
   isOutline?: boolean
   textBtn: string;
-  disabled?: boolean
+  disabled?: boolean;
+  classname?: string;
 }
 
 const Button = (props: ButtonProps) => {
@@ -17,7 +18,8 @@ const Button = (props: ButtonProps) => {
       className={cn("button", {
         "button_text": props.isTextBtn,
         "button_outline": props.isOutline
-      })}
+      },
+        props.classname)}
       disabled={props.disabled}
     >
       {props.textBtn}

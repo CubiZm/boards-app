@@ -3,7 +3,8 @@
 
 .avatar-box {
   display: flex;
-  margin-bottom: 2.4rem;
+  align-items: center;
+  margin-bottom: 2.6rem;
 }
 
 .avatar-box__picture {
@@ -19,6 +20,7 @@
   margin-right: 2.4rem;
   width: 8rem;
   height: 8rem;
+  text-decoration: none;
   outline: none;
 
   span {

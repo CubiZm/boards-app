@@ -49,6 +49,5 @@
 .input-box__label {
   @include text-style($font-secondary-text);
   display: block;
-  margin-bottom: 0.5rem;
   order: 1;
 }
