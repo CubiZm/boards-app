@@ -28,7 +28,7 @@
 
   &:disabled {
     border: 1px solid $medium-light-grey;
-    color: $medium-light-grey;
+    color: $medium-dark-grey;
     background-color: #fff;
 
     &:hover,
@@ -63,5 +63,10 @@
     border: 0;
     background-color: transparent;
     color: $blue;
+  }
+
+  &:disabled {
+    border: 0;
+    color: $medium-dark-grey;
   }
 }

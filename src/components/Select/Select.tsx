@@ -8,6 +8,7 @@ import "./Select.scss";
 interface selectProps {
   selectedTitle?: string;
   data: any;
+  disabled?: boolean;
 }
 
 const Select = (props: selectProps) => {
@@ -23,6 +24,7 @@ const Select = (props: selectProps) => {
           name={data.name}
           checked={true}
           onChange={() => console.log("hello")}
+          disabled={props.disabled}
         />
         <p key={i + 200} className="select-box__input-text">
           {data.selectValue ? data.selectValue : "Empty text"}

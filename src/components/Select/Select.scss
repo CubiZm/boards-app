@@ -64,7 +64,6 @@
   }
 
   &:disabled + .select-box__input-text {
-    display: block;
     border: 1px solid $medium-light-grey;
     color: $medium-dark-grey;
   }

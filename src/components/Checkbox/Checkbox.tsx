@@ -6,6 +6,8 @@ interface Props {
   id: string;
   name: string;
   text: string;
+  checked?: boolean;
+  disabled?: boolean;
 }
 
 const Checkbox = (props: Props) => {
@@ -41,6 +43,8 @@ const Checkbox = (props: Props) => {
         value="checkbox"
         className="input-toggle__input"
         onChange={handlerChanges}
+        checked={props.checked}
+        disabled={props.disabled}
       />
       <label
         htmlFor={props.id}

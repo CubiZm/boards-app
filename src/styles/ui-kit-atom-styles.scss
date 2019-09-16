@@ -1,0 +1,40 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.title-h1 {
+  @include text-style($font-title-h1, $font-lh-h1, $font-bold);
+}
+
+.title-h2 {
+  @include text-style($font-title-h2, $font-lh-h2, $font-bold);
+}
+
+.title-h3 {
+  @include text-style($font-title-h3, $font-lh-h3, $font-bold);
+}
+
+.main-text {
+  @include text-style($font-main-text, $font-lh-main);
+
+  a {
+    text-decoration: none;
+    color: $blue;
+
+    &:hover,
+    &:focus {
+      color: $light-blue
+    }
+
+    &:active {
+      color: $dark-blue;
+    }
+  }
+}
+
+.main-text {
+  @include text-style($font-main-text, $font-lh-main);
+}
+
+.secondary-text {
+  @include text-style($font-secondary-text, $font-lh-main);
+}
