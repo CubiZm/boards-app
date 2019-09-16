@@ -1,7 +1,7 @@
 Проект создан с помощью [Create React App](https://github.com/facebook/create-react-app).
 
-[Онлайн-версия проекта]().
-[UI-Kit]().
+[Онлайн-версия проекта](https://nicaean-securities.000webhostapp.com).
+[UI-Kit](https://nicaean-securities.000webhostapp.com/ui-kit.html).
 
 ## Технологии
 
